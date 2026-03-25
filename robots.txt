@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rheoai.co.in/sitemap.xml
