@@ -441,6 +441,7 @@
       .mani-grid { grid-template-columns:1fr; gap:40px; }
       .demo-grid { grid-template-columns:1fr; gap:40px; }
       .demo-grid .phone-wrap { display:flex; justify-content:center; }
+      .phone { width:min(310px,85vw); height:min(620px,calc(85vw * 2)); }
       .phone-mock { transform:none; max-width:320px; width:100%; }
       .feat-grid { grid-template-columns:1fr 1fr; gap:16px; }
       .steps { grid-template-columns:1fr; }
@@ -1076,7 +1077,7 @@ async function runChat() {
 
 const phoneObs=new IntersectionObserver(es=>{
   es.forEach(e=>{if(e.isIntersecting&&!animating){runChat();phoneObs.disconnect();}});
-},{threshold:.3});
+},{threshold:.1});
 phoneObs.observe(document.querySelector('.phone'));
 
 /* ── HERO INDUSTRY ROTATOR ── */
